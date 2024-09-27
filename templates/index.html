@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Slider Using Only HTML and CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        .hero {
+            height: 100vh;
+            background: url("{{ url_for('static', filename='images/fish.jpg') }}") no-repeat center center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-img-top {
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-size: 1.5rem; 
+            font-weight: bold; 
+        }
+
+        .card-text {
+            font-size: 1.25rem; 
+        }
+
+        @media(max-width:992px) {
+            .hero h1 {
+                color: rgb(209, 61, 197);
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.25rem;
+            }
+
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+
+            .btn-lg {
+                padding: 0.75rem 1.5rem;
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">WEBSITE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#appointment">VARITIES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ url_for('home') }}">BUY NOW</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ url_for('login') }}">ADMIN</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="text-center">
+        <p class="lead text-white"><b>JO AQUARIUM</b></p>
+        <p class="lead text-white"><b>WELCOME TO OUR AQUARIUM</b></p>
+        <a href="#service" class="btn btn-primary btn-lg">KNOW MORE</a>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/fish1.jpg') }}" class="card-img-top" alt="Golden Fishes">
+                    <div class="card-body">
+                        <h5 class="card-title">GOLDEN FISHES</h5>
+                        <p class="card-text">DISCOVER OUR  UNDER WATER PARADISE.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/fish2.jpg') }}" class="card-img-top" alt="Guppy Fishes">
+                    <div class="card-body">
+                        <h5 class="card-title">GUPPY FISHES</h5>
+                        <p class="card-text">ALWAYS AVAILABLE. EXPLORE OUR COLLECTION</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/fish3.jpg') }}" class="card-img-top" alt="Shark">
+                    <div class="card-body">
+                        <h5 class="card-title">SHARK</h5>
+                        <p class="card-text">EXOTIC SPECIES VARITIES</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/fish4.jpg') }}"class="card-img-top" alt="Animal Fish">
+                    <div class="card-body">
+                        <h5 class="card-title">ANIMAL FISH</h5>
+                        <p class="card-text">STUNNING AQUARIUM FISHES TO BRIGHTEN YOUR SPACE</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/fish5.jpg') }}" class="card-img-top" alt="Tang Fishes">
+                    <div class="card-body">
+                        <h5 class="card-title">TANG FISHES</h5>
+                        <p class="card-text">CHECK OUT OUR EXOTIC FISH COLLECTION</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/fish6.jpg') }}" class="card-img-top" alt="Clownfish">
+                    <div class="card-body">
+                        <h5 class="card-title">CLOWNFISH</h5>
+                        <p class="card-text">DISCOVER OUR VIBRANT FISH COLLECTION</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
